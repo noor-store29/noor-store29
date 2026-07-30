@@ -1,0 +1,625 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Cairo',sans-serif;
+    background:#f8f4eb;
+    color:#333;
+}
+
+.header{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index:999;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(255,248,239,.82);
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(80,96,68,.15);
+}
+
+
+.logo h1{
+    color:#435640;
+    font-size:40px;
+    margin:0;
+}
+
+.logo p{
+    color:#5d5d5d;
+    font-size:15px;
+    font-weight:500;
+}
+
+nav a{
+    color:#4e6b50;
+    text-decoration:none;
+    margin-right:25px;
+    font-weight:700;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#c5a15a;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:80px;
+    min-height:100vh;
+    padding:120px 8%;
+    background:linear-gradient(135deg,#f8f3ea,#ebe2d2,#d8e1d2);
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-content h1{
+    font-size:70px;
+    color:#3f5d4a;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.hero-content p{
+    font-size:22px;
+    color:#555;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:750px;
+    height:700px;
+    object-fit:cover;
+    border-radius:30px;
+    border:12px solid rgba(255,255,255,.8);
+    box-shadow:0 40px 90px rgba(0,0,0,.22);
+    transition:.5s;
+}
+
+.hero-image img:hover{
+    transform:scale(1.03) rotate(-1deg);
+}
+
+.btn{
+    display:inline-block;
+    background:#4e6b50;
+    color:#fff;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#d4af37;
+}
+
+.section-title{
+    text-align:center;
+    margin:60px 0 30px;
+    color:#4e6b50;
+    font-size:38px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding:0 8% 60px;
+}
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px;
+    color:#4e6b50;
+}
+
+.card p{
+    padding:0 15px 20px;
+}
+
+.contact{
+    background:#4e6b50;
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.subtitle{
+    color:#b08a3c;
+    font-size:18px;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    margin-top:35px;
+}
+
+.btn-outline{
+    display:inline-block;
+    padding:15px 35px;
+    border:2px solid #4e6b50;
+    border-radius:40px;
+    color:#4e6b50;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-outline:hover{
+    background:#4e6b50;
+    color:#fff;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+    padding:70px 8%;
+}
+
+.card{
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 50px rgba(0,0,0,.18);
+}
+
+.card img{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+.card h3{
+    color:#4e6b50;
+    font-size:24px;
+    margin:20px;
+}
+
+.card p{
+    margin:0 20px 25px;
+    color:#666;
+}
+
+.section-title{
+    text-align:center;
+    font-size:46px;
+    color:#4e6b50;
+    margin-top:90px;
+    margin-bottom:20px;
+}
+
+/* خلفية ناعمة للأقسام */
+section{
+    padding:80px 8%;
+}
+
+/* عنوان المعرض */
+.section-title{
+    position:relative;
+    display:inline-block;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.section-title::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    background:#c5a15a;
+    margin:15px auto 0;
+    border-radius:20px;
+}
+
+/* تحسين الأزرار */
+.btn,
+.btn-outline{
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+/* تأثير ناعم على الصور */
+img{
+    transition:0.4s ease;
+}
+
+img:hover{
+    filter:brightness(1.03);
+}
+.hero-content h1::after{
+content:"";
+display:block;
+width:90px;
+height:5px;
+background:#c9a44d;
+margin-top:15px;
+border-radius:20px;
+}
+<section id="gallery" class="gallery-section">
+
+<h2 class="section-title">معرض الأعمال</h2>
+
+<p class="section-subtitle">
+كل لوحة تُرسم يدويًا بحب لتكون قطعة فنية فريدة.
+</p>
+
+<div class="gallery">
+
+<div class="card">
+<img src="images/Woman-dream.jpg.jpeg" alt="">
+<h3>امرأة حالمة</h3>
+<p>لوحة أكريليك يدوية</p>
+<span class="price">اطلب السعر</span>
+<a href="#" class="card-btn">عرض التفاصيل</a>
+</div>
+
+<div class="card">
+<img src="images/karabuk-mosque.jpg" alt="">
+<h3>مسجد كارابوك</h3>
+<p>لوحة أكريليك</p>
+<span class="price">اطلب السعر</span>
+<a href="#" class="card-btn">عرض التفاصيل</a>
+</div>
+
+<div class="card">
+<img src="images/book-world.jpg" alt="">
+<h3>عالم الكتب</h3>
+<p>لوحة أكريليك</p>
+<span class="price">اطلب السعر</span>
+<a href="#" class="card-btn">عرض التفاصيل</a>
+</div>
+
+<div class="card">
+<img src="images/flamingo.jpg" alt="">
+<h3>الفلامنجو</h3>
+<p>لوحة أكريليك</p>
+<span class="price">اطلب السعر</span>
+<a href="#" class="card-btn">عرض التفاصيل</a>
+</div>
+
+</div>
+
+</section>
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    padding:80px 8%;
+    background:#f8f5ef;
+}
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.card h3{
+    color:#355c4b;
+    padding:15px 20px 5px;
+}
+
+.card p{
+    color:#666;
+    padding:0 20px 15px;
+}
+
+.price{
+    color:#b38b2d;
+    font-size:22px;
+    font-weight:bold;
+    padding:0 20px;
+}
+
+.card-btn{
+    display:block;
+    margin:20px;
+    padding:12px;
+    text-align:center;
+    background:#355c4b;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+}
+.footer{
+    background:#2f4f46;
+    color:#fff;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:60px;
+}
+
+.footer p{
+    margin:0;
+    font-size:16px;
+    letter-spacing:1px;
+}
+.categories{
+    padding:80px 8%;
+    background:#f8f4ef;
+    text-align:center;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:40px;
+}
+
+.category-card{
+    background:#ffffff;
+    padding:40px 20px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+    cursor:pointer;
+}
+
+.category-card:hover{
+    transform:translateY(-8px);
+}
+
+.category-card h3{
+    color:#4e6b5e;
+    font-size:28px;
+}
+/* صفحة المنتج */
+
+.product-page{
+    max-width:1200px;
+    margin:60px auto;
+    display:flex;
+    gap:50px;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    flex-wrap:wrap;
+}
+
+.product-image img{
+    width:500px;
+    max-width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.product-info{
+    max-width:450px;
+}
+
+.product-info h1{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.product-info p{
+    font-size:20px;
+    line-height:1.8;
+    color:#555;
+}
+
+.product-info h2{
+    color:#0f766e;
+    margin:25px 0;
+    font-size:35px;
+}
+
+.product-info h3{
+    margin-top:20px;
+}
+
+.product-info .btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#0f766e;
+    color:#fff;
+    text-decoration:none;
+    border-radius:12px;
+    font-size:18px;
+    transition:.3s;
+}
+
+.product-info .btn:hover{
+    background:#115e59;
+}
+.section-subtitle{
+    text-align:center;
+    color:#666;
+    font-size:18px;
+    margin-top:-10px;
+    margin-bottom:35px;
+}
+.custom-order{
+    background:#f6f2eb;
+    padding:80px 20px;
+    text-align:center;
+    margin-top:60px;
+}
+
+.custom-order h2{
+    font-size:36px;
+    color:#35584a;
+    margin-bottom:20px;
+}
+
+.custom-order p{
+    max-width:700px;
+    margin:0 auto 30px;
+    color:#666;
+    font-size:18px;
+    line-height:1.8;
+}
+/* تحسين الموقع للموبايل */
+
+@media (max-width:768px){
+
+.header{
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    margin-top:15px;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero-content{
+    order:2;
+}
+
+.hero-image{
+    order:1;
+}
+
+.hero-image img{
+    width:90%;
+    max-width:350px;
+}
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+.category-grid{
+    grid-template-columns:1fr;
+}
+
+.product-page{
+    flex-direction:column;
+}
+
+.product-image img{
+    width:100%;
+}
+
+.product-info{
+    text-align:center;
+}
+
+}
+.reviews{
+    padding:80px 20px;
+    background:#faf7f2;
+    text-align:center;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.review-card{
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.review-card p{
+    margin:15px 0;
+    color:#555;
+    line-height:1.7;
+}
+
+.review-card h4{
+    color:#35584a;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.logo h1{
+    margin:0;
+    color:#35584a;
+    font-size:30px;
+}
